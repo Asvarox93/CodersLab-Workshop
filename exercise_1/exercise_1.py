@@ -17,16 +17,17 @@ def guessing_game(guess_number):
     while True:
         try:
             guess = int(input("Guess the number: "))
-
-            if guess == guess_number:
-                print('You win!')
-                break
-            elif guess >= guess_number:
-                print('To big!')
-            else:
-                print('To small!')
         except ValueError:
             print("It's not a number!")
+            continue
+
+        if guess == guess_number:
+            print('You win!')
+            break
+        elif guess >= guess_number:
+            print('To big!')
+        else:
+            print('To small!')
 
 
 guessing_game()
